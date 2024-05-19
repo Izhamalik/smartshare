@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "662427729624",
+    "project_id": "smart-share-429d1",
+    "storage_bucket": "smart-share-429d1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:662427729624:android:854ceffa0d1acc7dc921ad",
+        "android_client_info": {
+          "package_name": "com.wifishare.filesharing.datashare.smartshare"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCA0Rkb02hFhXbOLXe9KO6dD4ROoIFA6CA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:enabled="true"
+        android:icon="@drawable/homeselector"
+        android:title="Home"/>
+    <item
+        android:id="@+id/filesFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_filesselector"
+        android:title="Files"/>
+
+    <item
+        android:id="@+id/settingsFragment"
+        android:enabled="true"
+        android:icon="@drawable/settingsselector"
+        android:title="Settings"/>
+</menu>

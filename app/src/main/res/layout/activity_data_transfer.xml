@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:CircleProgressView="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.activities.DataTransferActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/mainthemecolor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/backpressBtn"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:padding="@dimen/_2sdp"
+            android:src="@drawable/ic_backarrow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:text="Data Transfer"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/backpressBtn"
+            app:layout_constraintStart_toEndOf="@+id/backpressBtn"
+            app:layout_constraintTop_toTopOf="@+id/backpressBtn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5.5"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+        <TextView
+            android:id="@+id/transferringTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:padding="@dimen/_5sdp"
+            android:textSize="@dimen/_12sdp"
+            android:visibility="gone" />
+
+
+        <ImageView
+            android:id="@+id/tickGreen"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:src="@drawable/ic_green_tick_circle"
+            android:visibility="gone" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout1"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_10sdp">
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/circleView"
+                android:layout_width="@dimen/_75sdp"
+                android:layout_height="@dimen/_75sdp"
+                android:clickable="false"
+
+                CircleProgressView:layout_constraintBottom_toBottomOf="parent"
+                CircleProgressView:layout_constraintEnd_toEndOf="parent"
+                CircleProgressView:layout_constraintStart_toStartOf="parent"
+                CircleProgressView:layout_constraintTop_toTopOf="parent"
+                CircleProgressView:trackColor="@color/light_gray_white"
+                app:indicatorSize="@dimen/_96sdp" />
+
+
+            <TextView
+                android:id="@+id/percent_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0%"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_25sdp"
+                CircleProgressView:layout_constraintBottom_toBottomOf="@+id/circleView"
+                CircleProgressView:layout_constraintEnd_toEndOf="@+id/circleView"
+                CircleProgressView:layout_constraintStart_toStartOf="@+id/circleView"
+                CircleProgressView:layout_constraintTop_toTopOf="@+id/circleView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/totalSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="normal" />
+
+
+        <TextView
+            android:id="@+id/totalData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_10sdp"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="normal" />
+
+        <LinearLayout
+            android:id="@+id/llTabBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:visibility="gone">
+
+            <include
+                android:id="@+id/tabBar"
+                layout="@layout/tab_bar_without_icons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnDone"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_20sdp"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/mainthemecolor"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:rippleColor="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/_20sdp"
+                android:text="@string/done"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp" />
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/notification_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Do not close this application while transferring the data..."
+            android:textColor="@color/black"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

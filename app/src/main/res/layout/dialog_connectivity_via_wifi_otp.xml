@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_270sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="@dimen/_300sdp"
+    app:cardBackgroundColor="@color/white"
+    app:strokeWidth="0dp"
+    app:cardElevation="@dimen/_2sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/_15sdp">
+
+
+        <ImageView
+            android:id="@+id/closeBtn"
+            android:layout_width="@dimen/_23sdp"
+            android:layout_height="@dimen/_23sdp"
+            android:src="@drawable/ic_close_white"
+            android:padding="@dimen/_3sdp"
+            android:layout_margin="@dimen/_12sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transfer data over Wi-Fi?"
+            android:textColor="@color/mainthemecolor"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/closeBtn" />
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_4sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/wifiName1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:text="1- Both devices should be connected to same Wi-Fi fo transfering the data."
+                android:textColor="#4e4f51" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:src="@drawable/ic_wifi"
+            android:layout_marginTop="@dimen/_12sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+
+        <TextView
+            android:id="@+id/wifiName1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Wifi Name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/imageView8"
+            />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/scanner_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_6sdp"
+            app:strokeWidth="0dp"
+            app:cardBackgroundColor="@color/mainthemecolor"
+            app:cardCornerRadius="@dimen/_6sdp"
+            app:layout_constraintBottom_toTopOf="@+id/okay_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:background="#00FFFFFF"
+                android:gravity="center"
+                android:text="@string/connecting_via_wifi"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_12sdp" />
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/okay_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/_6sdp"
+            android:layout_marginBottom="@dimen/_25sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="@color/mainthemecolor"
+            app:strokeWidth="@dimen/_1sdp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:background="#00FFFFFF"
+                android:gravity="center"
+                android:text="@string/cancel"
+                android:textColor="@color/mainthemecolor"
+                android:textSize="@dimen/_12sdp" />
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

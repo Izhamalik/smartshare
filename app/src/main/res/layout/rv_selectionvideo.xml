@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_100sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="@dimen/_1sdp"
+    app:strokeWidth="0dp"
+    app:cardBackgroundColor="#EAE9E9"
+    android:layout_marginStart="@dimen/_8sdp"
+    android:layout_marginBottom="@dimen/_8sdp">
+
+    <FrameLayout
+        android:id="@+id/selectedlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:elevation="@dimen/_1sdp"
+        android:background="#60000000">
+
+        <ImageView
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:src="@drawable/ic_tick"
+            android:layout_gravity="center"/>
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/imageHolder"
+        android:layout_width="match_parent"
+        android:scaleType="centerCrop"
+        android:layout_height="match_parent"/>
+
+
+    <ImageView
+        android:id="@+id/playBtn"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:src="@drawable/ic_play"/>
+
+</com.google.android.material.card.MaterialCardView>

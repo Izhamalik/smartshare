@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_270sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="@dimen/_290sdp"
+    app:cardElevation="@dimen/_3sdp"
+    app:cardBackgroundColor="@color/white"
+    app:strokeWidth="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_15sdp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/closeBtn"
+            android:layout_width="@dimen/_23sdp"
+            android:layout_height="@dimen/_23sdp"
+            android:src="@drawable/ic_close_white"
+            android:padding="@dimen/_3sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="Create Or Scan OTP Code"
+            android:textColor="@color/mainthemecolor"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start|center"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/editText"
+            app:layout_constraintTop_toBottomOf="@+id/textView8">
+
+            <ImageView
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/ic_otp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+
+                android:text="OTP"
+                android:textColor="@color/mainthemecolor"
+                android:textSize="@dimen/_15sdp" />
+
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:backgroundTint="#007EFA"
+            android:gravity="center|start"
+            android:hint="Type your OTP here..."
+            android:layout_marginTop="@dimen/_10sdp"
+            android:inputType="numberDecimal"
+            android:textColor="@color/black"
+            android:textColorHint="@color/light_gray"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:textSize="@dimen/_17sdp"
+
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/scanner_btn"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/scanner_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_43sdp"
+            android:layout_marginHorizontal="@dimen/_11sdp"
+            android:backgroundTint="@color/mainthemecolor"
+            android:text="@string/scan"
+            android:textColor="@color/white"
+            app:cornerRadius="@dimen/_6sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            app:layout_constraintBottom_toTopOf="@+id/okay_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/okay_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:backgroundTint="@color/white"
+            android:text="Okay"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:textColor="@color/mainthemecolor"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cornerRadius="@dimen/_6sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="@color/mainthemecolor"
+            app:strokeWidth="@dimen/_1sdp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>
